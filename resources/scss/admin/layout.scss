@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import '_base-style';
+*, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primary-color: #8e56db;
+$secondary-color: #C8C6DE;
+$btn-color: #bda9d8;
+$horizontal-nav-height: 17vh;
+$vertical-nav-width: 20vw;
+
+html{
+    .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+    }
+        .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+    }      
+    .poppins-bold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }
+    
+    .poppins-extrabold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 800;
+        font-style: normal;
+    }      
+}
+
+
+body{
+    background-color: $secondary-color;
+}
+
+.horizontal-nav {
+    background-color: $primary-color;
+    @include flex-space-between;
+    padding: 0 2rem;
+    height: $horizontal-nav-height;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    .right-nav {
+        width: 15vw;
+        @include flex-space-between;
+        // border: solid 1px black;
+        *{display: inline-block;}
+    }
+}
+
+.vertical-nav {
+    position: fixed;
+    top: $horizontal-nav-height;
+    left: 0;
+    width: $vertical-nav-width;
+    height: calc(100vh - ($horizontal-nav-height));
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    a{
+        @include links;
+    }
+}
+.admin{
+    position: absolute;
+    top: 14vh;
+    left: 21vw;
+    text-align: capitalize;
+    color: $btn-color;
+}
+.content {
+    position: absolute;
+    top: $horizontal-nav-height;
+    left: $vertical-nav-width;
+    right: 0;
+    min-height: calc(100vh - $horizontal-nav-height);
+    background-color: white;
+}
