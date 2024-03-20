@@ -3,3 +3,16 @@
     justify-content: space-between;
     align-items: center;
 }
+
+@mixin links {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: whitesmoke;
+    padding: 1rem .5rem;
+    font-size: 1.2rem;
+    &:hover{
+        color:$btn-color;
+        font-size: 1.4rem;
+        padding: 0.8rem;
+    }
+}

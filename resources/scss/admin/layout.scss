@@ -8,7 +8,7 @@
 
 $primary-color: #8e56db;
 $secondary-color: #C8C6DE;
-$btn-color: #DB408E;
+$btn-color: #bda9d8;
 $horizontal-nav-height: 17vh;
 $vertical-nav-width: 20vw;
 
@@ -76,6 +76,16 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    a{
+        @include links;
+    }
+}
+.admin{
+    position: absolute;
+    top: 14vh;
+    left: 21vw;
+    text-align: capitalize;
+    color: $btn-color;
 }
 .content {
     position: absolute;

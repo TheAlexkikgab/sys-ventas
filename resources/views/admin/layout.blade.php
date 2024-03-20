@@ -11,8 +11,8 @@
 <body>
     <section class="horizontal-nav">
         <div class="left-nav">
-            <h2>Panel Administración de Sys-ventas</h2>
-            <p>admin</p>
+            <h2>Panel de Administración de Sys-ventas</h2>
+            <h3 class="admin">ADMIN</h3>
         </div>
         <div class="right-nav">
             <p>loggedAdmin</p>
