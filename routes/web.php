@@ -1,5 +1,6 @@
 <?php
 
+use App\Livewire\Shop\Home;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +26,16 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+});
+
+Route::get('/admin',function(){
+    return view('admin.layout');
+});
+
+Route::get('/admin/category',function(){
+    return view('admin.category');
+});
+
+Route::prefix('shop')->group(function(){
+    Route::get('',Home::class)->name('shop.home');
 });
