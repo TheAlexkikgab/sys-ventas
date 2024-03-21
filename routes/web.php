@@ -42,3 +42,7 @@ Route::controller(CategoryController::class)->group(function (){
     Route::delete('/categories/{category}', 'destroy')->name('category.destroy');
     });
 });
+
+Route::prefix('shop')->group(function(){
+    Route::get('',Home::class)->name('shop.home');
+});
