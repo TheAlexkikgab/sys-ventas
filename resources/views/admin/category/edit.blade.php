@@ -1,6 +1,8 @@
+@vite(['resources/scss/admin/editcreateform.scss'])
 @extends('admin.layout')
 @section('content')
     <h1>Actualizar categoria</h1>
+    <a href="{{ route('category.show', ['category'=>$category]) }}">Volver</a>
     {{-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur facilis unde nulla pariatur quos.</p>--}}
     {{--{{ $category }}--}}
     <form action="{{ route('category.update', ['category'=>$category]) }}" class="create" method="post">

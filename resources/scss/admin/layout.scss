@@ -1,16 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
 @import '_base-style';
+@import 'colors';
 *, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-$primary-color: #8e56db;
-$secondary-color: #C8C6DE;
-$btn-color: #bda9d8;
-$horizontal-nav-height: 17vh;
-$vertical-nav-width: 20vw;
+
 
 html{
     .poppins-regular {
@@ -58,6 +55,14 @@ body{
     right: 0;
     z-index: 1000;
 
+    .left-nav a{
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: $btn-color;
+    }
+
     .right-nav {
         width: 15vw;
         @include flex-space-between;
@@ -94,4 +99,18 @@ body{
     right: 0;
     min-height: calc(100vh - $horizontal-nav-height);
     background-color: white;
+    padding: 1rem;
+    h1{
+        text-align: center;
+        text-transform: capitalize;
+        margin:2rem 0;
+    }
+}
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:inherit;
+    min-height:inherit;
 }

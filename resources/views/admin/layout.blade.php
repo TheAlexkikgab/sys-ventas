@@ -11,7 +11,8 @@
 <body>
     <section class="horizontal-nav">
         <div class="left-nav">
-            <h2>Panel de Administración de Sys-ventas</h2>
+            {{-- <h2>Panel de Administración de Sys-ventas</h2> --}}
+            <a href="{{ url('/admin') }}">Panel de Administración de Sys-ventas</a>
             <h3 class="admin">ADMIN</h3>
         </div>
         <div class="right-nav">
@@ -20,7 +21,7 @@
         </div>
     </section>
     <section class="vertical-nav">
-        <a href="">Administrar Categorías</a>
+        <a href="{{ route('category.index') }}">Administrar Categorías</a>
         <a href="">Administrar Productos</a>
         <a href="">Administrar Banners</a>
         <a href="">Administrar Órdenes</a>
@@ -29,7 +30,7 @@
     </section>
     <section class="content">
         {{-- <h1>Acá va el contenido</h1> --}}
-        @yield('content','Bienvenido al Panel de Administración')
+        @yield('content', View::make('admin.dashboard'))
     </section>
 </body>
 </html>

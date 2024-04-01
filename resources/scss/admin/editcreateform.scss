@@ -1,0 +1,39 @@
+@import 'colors';
+form{
+    width: 60%;
+    margin: auto;
+    //border: solid 1px black;
+    .form-group{
+        display: grid;
+        grid-template-columns: 30% 70%;
+        padding: .5rem 0;
+        height: 4rem;
+        label{
+            display: flex;
+            align-items: center;
+            padding-right: 1rem;
+        }
+        input, select{
+            border-radius: 5px;
+            box-shadow: 5px 5px 5px gray;
+            border: none;
+            outline-color: $primary-color;
+            padding-left: 1rem;
+            text-transform: capitalize;
+        }
+        &:last-child {
+            height: 4rem;
+            display: flex;
+            input{
+                width: 70%;
+                margin-left: 30%;
+                height: 100%; 
+                background-color: $primary-color; 
+                border: none;
+                outline: none;
+                border-radius: 5px;
+                box-shadow: 5px 5px 5px gray;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.category-titles, .category {
+    display: grid;
+    grid-template-columns: 10% 20% 20% 50%;
+    p{
+        padding:.7rem 0;
+        text-transform: capitalize;
+    }
+
+}
+
+.category-titles{
+    font-weight: 700;
+    p:last-child{text-align: center;}
+    margin-top: 1rem;
+}
+.category .category-action{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+
+
+
+
+
+    

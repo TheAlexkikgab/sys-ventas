@@ -1,0 +1,21 @@
+.category-titles, .category {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    p{
+        padding:.7rem 0;
+        text-transform: capitalize;
+    }
+    a {
+        display: contents;
+      }
+}
+
+.category-titles{
+    font-weight: 700;
+    p:last-child{text-align: center;}
+    margin-top: 1rem;
+}
+.category p:last-child{
+    display: flex;
+    justify-content: space-evenly;
+}

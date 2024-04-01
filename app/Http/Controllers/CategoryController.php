@@ -11,6 +11,7 @@ class CategoryController extends Controller
     public function index(Category $category)
     {
         $categories = $category->all();
+        
         return view('admin.category.index', compact('categories'));
     }
 
@@ -60,7 +61,9 @@ class CategoryController extends Controller
     }
 
     //Eliminar una fila especifica de la tabla 
-    public function destroy()
+    public function destroy(Category $category)
     {
+        $category->delete();
+        return to_route('category.index');
     }
 }

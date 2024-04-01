@@ -1,3 +1,4 @@
+@vite(['resources/scss/admin/editcreateform.scss'])
 @extends('admin.layout')
 @section('content')
     <h1>Agregar nueva categoria</h1>
