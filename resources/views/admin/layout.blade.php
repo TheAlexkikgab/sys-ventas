@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/da1f68a07d.js" crossorigin="anonymous"></script>
     <title>sys-ventas</title>
     @vite(['resources/scss/admin/layout.scss'])
+    @stack('component-styles')
 </head>
 <body>
     <section class="horizontal-nav">

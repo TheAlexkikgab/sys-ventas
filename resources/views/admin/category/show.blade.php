@@ -2,7 +2,7 @@
 @extends('admin.layout')
 @section('content')
     <h1>Administración de Categorías</h1>
-    <a href="{{ route('category.index') }}">Volver</a>
+    <x-admin.action-links routeName="category.index">Volver</x-admin.action-links>
     <div class="category-titles">
         <p>Id</p>
         <p>name</p>
@@ -17,9 +17,9 @@
         <p>{{ $category->status }}</p>
         <p>{{ $category->created_at }}</p>
         <p>{{ $category->updated_at }}</p>
-            {{-- <a href="{{ route('category.show', ['category'=>$category]) }}">Detalles</a> --}}
-            <a href="{{ route('category.edit', ['category'=>$category]) }}">Editar</a>
-            <a href="">Eliminar</a>
+        <div class="category-actions">
+            <x-admin.action-links class="edit" routeName="category.edit" :routeParam="['category'=>$category]">Editar</x-admin.action-links>
+            <x-admin.delete-form routeName="category.destroy" :routeParam="['category'=>$category]"/>
+        </div class="category-actions">
     </div>
-    {{-- {{ $category }} --}}
 @endsection
