@@ -8,7 +8,7 @@
     <div class="category-titles">
         <p>Id</p>
         <p>name</p>
-        <p>status</p>
+        <p>Estado</p>
         <p>action</p>
     </div>
     @endonce

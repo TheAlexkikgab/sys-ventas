@@ -41,5 +41,17 @@ Route::prefix('/admin')->group(function () {
     Route::patch('/categories/{category}', 'update')->name('category.update');
     Route::delete('/categories/{category}', 'destroy')->name('category.destroy');
     });
+
+    //Rutas de la administracion de productos
+
+    Route::controller(App\Http\Controllers\ProductController::class)->group(function () {
+        Route::get('/products', 'index')->name('product.index');
+        Route::get('/products/create', 'create')->name('product.create');
+        Route::post('/products', 'store')->name('product.store');
+        Route::get('/products/{product}/edit', 'edit')->name('product.edit');
+        Route::get('/products/{product}', 'show')->name('product.show');
+        Route::patch('/products/{product}', 'update')->name('product.update');
+        Route::delete('/products/{product}', 'destroy')->name('product.destroy');
+        });
 });
 

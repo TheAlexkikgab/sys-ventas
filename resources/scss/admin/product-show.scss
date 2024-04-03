@@ -1,0 +1,31 @@
+.product-details{
+    width: 60%;
+    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .product-colmn{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    .p-actions{
+        margin-top: 1rem;
+        width: 70%;
+        height: 3rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+.p-title{
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 1rem .5rem;
+}
+.p-val{
+    text-transform: capitalize;
+    padding: 1rem .5rem;
+}
