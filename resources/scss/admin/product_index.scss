@@ -1,0 +1,21 @@
+.product-titles, .product {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    p{
+        padding:.7rem 0;
+        text-transform: capitalize;
+    }
+
+}
+
+.product-titles{
+    font-weight: 700;
+    p:last-child{text-align: center;}
+    margin-top: 1rem;
+}
+.product .product-actions{
+    grid-column: span 3;
+    display: flex;
+    justify-content: space-evenly;
+}

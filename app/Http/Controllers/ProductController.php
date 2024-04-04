@@ -32,10 +32,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
         $data = $this->validateData();
         $product = Product::create($data);
+        //dd($product);
+        $this->storeImage($product);
         return to_route('product.show', compact('product'));
-        //$product = Product::
+        
     }
 
     /**
@@ -61,6 +64,7 @@ class ProductController extends Controller
     {
         $data = $this->validateData();
         $product->update($data);
+        $this->storeImage($product);
         return to_route('product.show', compact('product'));
     }
 
@@ -78,14 +82,23 @@ class ProductController extends Controller
         $data = request()->validate([
             'name' => 'required',
             'category_id' =>'required|exists:categories,id',
-            'description' => 'sometimes',
-            'price' => 'sometimes|numeric|min:1',
-            'quantity'=> 'sometimes|numeric|min:0',
-            'image' => 'sometimes',
-            'status' => 'sometimes'
+            'description' => 'nullable',
+            'price' => 'nullable|numeric|min:1',
+            'quantity'=> 'nullable|numeric|min:0',
+            'image' => 'sometimes|file|image|max:5000',
+            'status' => 'required'
         ]);
         return $data;
     }
+    private function storeImage($product)
+    {
+        if(request()->hasFile('image')){
+            $product->update([
+                'image'=>request()->file('image')->store('uploads', 'public')
+            ]);
+         }
+
+         /*$image = Image::make(public_path('storage/' .$product->image));
+         $image->fit(400, 400)->save();*/
+    }
 }
-
-

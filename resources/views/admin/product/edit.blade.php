@@ -8,7 +8,7 @@
         @csrf
         @method('PATCH')
         <div class="form-group">
-            <label for="name">Nombrequantity</label>
+            <label for="name">Nombre</label>
             <input type="text" name="name" id="name" value="{{ old('name', $product->name) }}">
             @error('name')
                 <p>{{ $message }}</p>
@@ -17,7 +17,12 @@
 
         <div class="form-group">
             <label for="category_id">Categoría</label>
-            <input type="text" name="category_id" id="category_id" value="{{ old('category_id', $product->category_id) }}">
+            {{-- <input type="text" name="category_id" id="category_id" value="{{ old('category_id', $product->category_id) }}"> --}}
+            <select name="category_id" id="category">
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}" {{ $category->id===$product->category_id ? 'selected':'' }}>{{ $category->name }}</option>
+                @endforeach    
+            </select>  
             @error('category_id')
                 <p>{{ $message }}</p>
             @enderror

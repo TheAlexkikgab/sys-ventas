@@ -60,7 +60,7 @@ body{
             font-size: 1.5rem;
             text-decoration: none;
             text-transform: capitalize;
-            color: $btn-color;
+            color: rgb(255, 255, 255);
     }
 
     .right-nav {
@@ -90,7 +90,7 @@ body{
     top: 14vh;
     left: 21vw;
     text-align: capitalize;
-    color: $btn-color;
+    color: rgb(0, 0, 0);
 }
 .content {
     position: absolute;
@@ -98,7 +98,7 @@ body{
     left: $vertical-nav-width;
     right: 0;
     min-height: calc(100vh - $horizontal-nav-height);
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     padding: 1rem;
     h1{
         text-align: center;

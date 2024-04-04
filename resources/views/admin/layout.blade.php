@@ -23,7 +23,7 @@
     </section>
     <section class="vertical-nav">
         <a href="{{ route('category.index') }}">Administrar Categorías</a>
-        <a href="">Administrar Productos</a>
+        <a href="{{ route('product.index') }}">Administrar Productos</a>
         <a href="">Administrar Banners</a>
         <a href="">Administrar Órdenes</a>
         <a href="">Administrar Clientes</a>

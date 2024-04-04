@@ -15,8 +15,13 @@
 {{-- Ingresar Categoria del producto --}}
         <div class="form-group">
             <label for="category">Categoria del producto:</label>
-            <input type="text" name="category_id" id="category" value="{{ old('category_id') }}">
-            @error('category_id')
+          {{--   <input type="text" name="category_id" id="category" value="{{ old('category_id') }}"> --}}
+            <select name="category_id" id="category">
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                @endforeach    
+            </select>    
+          @error('category_id')
                 <p>{{ $message }}</p>
             @enderror
         </div>

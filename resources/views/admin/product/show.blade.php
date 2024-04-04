@@ -34,10 +34,13 @@
             <div class="p-val">{{ $product->price }}</div>
         </div>
 
-        <div class="product-colmn">
-            <div class="p-title">Imagen</div>
+        @if ($product->image)
+        <img src="{{ asset('storage/'. $product->image) }}" alt="">
+        @endif
+       {{--  <div class="product-colmn">
+            <div class="p-title">imagen</div>
             <div class="p-val">{{ $product->image }}</div>
-        </div>
+        </div> --}}
 
         <div class="product-colmn">
             <div class="p-title">Estado</div>
