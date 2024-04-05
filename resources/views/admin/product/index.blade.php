@@ -37,5 +37,5 @@
     <p class="empty-p">No hay productos para mostrar</p>
     @endforelse
 
-
+    {{ $products->links('admin.paginator') }}
 @endsection

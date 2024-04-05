@@ -1,0 +1,43 @@
+@import'colors';
+.custom-pagination {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .pagination{
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    .page-item{
+        margin:0 5px;
+        &.disabled .page-link{
+            background-color: #f7f7f7;
+            color:#aaa;
+            pointer-events:none;
+        }
+    }
+    .page-item{
+        margin:0 5px;
+        &.active .page-link{
+            background-color: $primary-color;
+            color:#fcfcfc;
+            pointer-events:none;
+        }
+    }
+    .page-link{
+        width: 3rem;
+        height: 3rem;
+        border: solid 1px #ccc;
+        padding: 10px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #f7f7f7;
+        &:hover {
+            background-color: $secondary-color;
+        }
+    }
+}
