@@ -11,7 +11,7 @@
 
         <div class="product-colmn">
             <div class="p-title">Categoria</div>
-            <div class="p-val">{{ $product->category_id }}</div>
+            <div class="p-val">{{ $product->category->name }}</div>
         </div>
 
         <div class="product-colmn">
@@ -37,10 +37,7 @@
         @if ($product->image)
         <img src="{{ asset('storage/'. $product->image) }}" alt="">
         @endif
-       {{--  <div class="product-colmn">
-            <div class="p-title">imagen</div>
-            <div class="p-val">{{ $product->image }}</div>
-        </div> --}}
+
 
         <div class="product-colmn">
             <div class="p-title">Estado</div>
