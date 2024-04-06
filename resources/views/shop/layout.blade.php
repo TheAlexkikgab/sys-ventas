@@ -100,7 +100,7 @@
             </form></div>
             <div class="user-actions">
                 @guest
-                    <a href="/"><i class="fa-solid fa-user"></i> Cuenta</a>
+                    <a href="/login"><i class="fa-solid fa-user"></i> Cuenta</a>
                 @endguest
                 @auth
                     user-name

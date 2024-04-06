@@ -3,7 +3,7 @@
     @forelse ($products as $product)
         <livewire:shop.grid-item :product="$product" wire:key="{{ $product->create_at }}"/>
     @empty
-        <p>No hay contenido para mostrar.</p>
+        <p class= 'content'>No hay contenido para mostrar.</p>
     @endforelse
     <style>
     .products-grid{
@@ -12,6 +12,12 @@
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
         gap: 2rem;
             
+    }
+    .content {
+        color: #f5f7f6;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 6rem;
     }
     </style>
 
