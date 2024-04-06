@@ -44,6 +44,20 @@ body{
     background-color: $secondary-color;
 }
 
+h1, h2, p, .product-titles, .product {
+    color: $secondary-color;
+}
+
+.product-titles, .product-colmn, .product-titles{
+    color: $secondary-color;
+}
+
+.form-group{
+    color: $secondary-color;
+}
+
+
+
 .horizontal-nav {
     background-color: $primary-color;
     @include flex-space-between;
@@ -90,7 +104,7 @@ body{
     top: 14vh;
     left: 21vw;
     text-align: capitalize;
-    color: rgb(0, 0, 0);
+    color: $secondary-color;
 }
 .content {
     position: absolute;
@@ -98,7 +112,7 @@ body{
     left: $vertical-nav-width;
     right: 0;
     min-height: calc(100vh - $horizontal-nav-height);
-    background-color: rgb(255, 255, 255);
+    background-color: #281c32;
     padding: 1rem;
     h1{
         text-align: center;

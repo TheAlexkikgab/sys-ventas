@@ -9,6 +9,14 @@
 
     
     <style>
+        .prod-desc{
+            text-align:center;
+        }
+
+        .prod-price{
+            text-align:center;
+        }
+
         .grid-item{
             /* background-color: rgb(233, 205, 255); */
             padding:1rem;
@@ -26,7 +34,7 @@
             object-fit:cover;
             display: block;
             margin:0 auto;
-
+            border-radius: 2rem;
         }
 
         .grid-item .img-container .add-to-basket{
@@ -55,6 +63,7 @@
             padding-top: 1rem;
             font-weight: bold;
             font-size: 2rem;
+            text-align:center;
         }
 
     </style>

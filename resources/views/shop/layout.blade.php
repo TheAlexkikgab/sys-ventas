@@ -66,7 +66,6 @@
         }
 
         .header .nav-actions .user-actions *{
-            margin-left:1.5rem;
             font-size:1.4rem;
         }
 
@@ -82,13 +81,53 @@
             font-size: 2rem;
             padding-left:2rem;
             color:var(--black-color);
+            padding: 10px 30px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-left:3rem;
         }
+
+            .header .nav-menu a:hover{
+                background-color: #6b283a;
+            }
 
         .main{
             padding:0 5rem;
 
         }
 
+            .boton {
+            padding: 10px 30px;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            background-color: #281c32;
+        }
+        .boton .i{
+            color: white;
+        }
+
+        .boton:hover {
+            background-color: #6b283a;
+        }
+        
+        .boton:active {
+            background-color: #6b283a;
+        }
+  
     </style>
 </head>
 <body>
@@ -100,15 +139,21 @@
             </form></div>
             <div class="user-actions">
                 @guest
-                    <a href="/login"><i class="fa-solid fa-user"></i> Cuenta</a>
+                    <a href="/login" class="boton"><i class="fa-solid fa-user"></i> Cuenta</a>
                 @endguest
                 @auth
-                    user-name
+                <a class="dropdown-item boton" href="http://localhost:8000/logout" onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                </a>
+                <form id="logout-form" action="http://localhost:8000/logout" method="POST" class="d-none">
+                    <input type="hidden" name="_token" value="zMSAR8msM2nuPHmXTogBfitDXvH4UbRX7dk2xZdv" autocomplete="off">
+                </form>
                 @endauth
-                <div class="basket"> <i class="fa-solid fa-basket-shopping"></i> Carrito</div>
+                <div class="boton"><i class="fa-solid fa-basket-shopping"></i> Carrito (Proximamente)</div>
             </div>
         </div>
-        <div class="nav-menu">
+        <div class="nav-menu ">
             @foreach ($categories as $category)
             <a wire:navigate href="{{ route('shop.category-products', ['category'=>$category]) }}">{{ $category->name }}</a>
             @endforeach
