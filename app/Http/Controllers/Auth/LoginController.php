@@ -37,3 +37,9 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 }
+
+if (auth()->user()->hasRole('shop-access')) {
+    return redirect()->route('shop.layout');
+}
+
+    return redirect()->intended('/');

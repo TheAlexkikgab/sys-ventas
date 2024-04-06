@@ -10,11 +10,11 @@
     
     <style>
         .grid-item{
-            background-color: rgb(233, 205, 255);
+            /* background-color: rgb(233, 205, 255); */
             padding:1rem;
         }
         .grid-item:nth-of-type(odd){
-            background-color: rgb(0, 255, 242)
+            background-color: #98445b
         }
         .grid-item .img-container{
             width: 90%;
