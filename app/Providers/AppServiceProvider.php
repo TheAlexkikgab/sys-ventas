@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        View::composer(['admin.product.create', 'admin.product.edit'], function($view){
+        View::composer(['shop.layout', 'admin.product.create', 'admin.product.edit'], function($view){
             $view->with( "categories", Category::all());
         });
     }

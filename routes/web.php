@@ -1,6 +1,15 @@
 <?php
 
+use App\Livewire\Shop\Home;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
+use App\Livewire\Shop\CategoryProducts;
+
+//use App\Livewire\Shop\CategoryProducts;
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +64,7 @@ Route::prefix('/admin')->group(function () {
         });
 });
 
+Route::prefix('shop')->group(function(){
+    Route::get('', Home::class)->name('shop.home');
+    Route::get('/{category}', CategoryProducts::class)->name('shop.category-products');
+});
