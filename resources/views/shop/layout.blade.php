@@ -13,10 +13,10 @@
     <style>
 
         :root{
-            --primary-color: rgb(0, 255, 204);
-            --darker-shade: rgb(4, 157, 126);
-            --black-color: rgb(1, 32, 26);
-            --gray-color: rgb(160, 170, 168);
+            --primary-color: #98445b;
+            --darker-shade: #6b283a;
+            --black-color: #f5f7f6;
+            --gray-color: #8fa493;
         }
         *{
             margin:0;
@@ -36,7 +36,7 @@
         }
 
         body{
-            background-color: #fff;
+            background-color: #281c32;
         }
 
         a{
@@ -94,13 +94,13 @@
 <body>
     <header class="header">
         <div class="nav-actions">
-            <a href="" class="logo">Sys-ventas</a>
+            <a href="/shop" class="logo">Sys-ventas</a>
             <div class="search-form"><form action="">
-            <input type="search" name="search" placeholder="search...">   
+            {{-- <input type="search" name="search" placeholder="search...">    --}}
             </form></div>
             <div class="user-actions">
                 @guest
-                    <a href=""><i class="fa-solid fa-user"></i> Cuenta</a>
+                    <a href="/"><i class="fa-solid fa-user"></i> Cuenta</a>
                 @endguest
                 @auth
                     user-name
